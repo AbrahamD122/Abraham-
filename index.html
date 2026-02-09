@@ -68,18 +68,31 @@
         </p>
         <button onclick="mostrarMensaje()">Haz clic aquí 💌</button>
 
-<div id="sorpresa" style="display:none; margin-top:20px;">
-    <p>Te amo con todo mi corazon❤️</p>
+<div id="sorpresa" class="oculto">
+    <p>Te amo con todo mi corazón ♥️ </p>
 
-    <img src="84bc679a-a285-4414-8811-6ff78faeaa63.jpeg" 
-         alt="." 
-         width="250" 
+    <img src="84bc679a-a285-4414-8811-6ff78faeaa63.jpeg”
+         alt="."
+         width="250"
          style="border-radius:15px; margin-top:15px;">
 </div>
 
+<style>
+.oculto {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease;
+}
+
+.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
+
 <script>
 function mostrarMensaje() {
-    document.getElementById("sorpresa").style.display = "block";
+    document.getElementById("sorpresa").classList.add("mostrar");
 }
 </script>
 
